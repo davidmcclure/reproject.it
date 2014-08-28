@@ -1,0 +1,10 @@
+{
+  "name": "reproject.it",
+  "version": "0.0.0",
+  "description": "Reproject all the things.",
+  "author": {
+    "name": "David McClure",
+    "email": "davidwilliammcclure@gmail.com",
+    "url": "http://dclure.org"
+  }
+}
