@@ -12,7 +12,10 @@ gulp.task('template', function() {
 
 gulp.task('server', function() {
   gulp.src('_site')
-    .pipe(webserver());
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
 });
 
 gulp.task('watch', function() {
