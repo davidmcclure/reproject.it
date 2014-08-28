@@ -8,6 +8,7 @@
     "url": "http://dclure.org"
   },
   "devDependencies": {
-    "gulp": "^3.8.7"
+    "gulp": "^3.8.7",
+    "gulp-jade": "^0.7.0"
   }
 }
