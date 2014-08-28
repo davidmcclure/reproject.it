@@ -6,5 +6,8 @@
     "name": "David McClure",
     "email": "davidwilliammcclure@gmail.com",
     "url": "http://dclure.org"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7"
   }
 }
