@@ -4,5 +4,10 @@ var $ = require('jquery');
 
 
 $(function() {
-  console.log('ready');
+
+  // When the source data changes.
+  $('[name="sdata"]').on('input', function(e) {
+    console.log(e);
+  });
+
 });
