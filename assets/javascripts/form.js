@@ -2,43 +2,36 @@
 
 /** @jsx React.DOM */
 var React = require('react');
+var Format = require('./format');
+var Projection = require('./projection');
+var Data = require('./data');
 
 
 module.exports = React.createClass({
 
 
   /**
-   * Render the conversion form.
+   * The source and target form inputs.
    */
   render: function() {
     return (
+      <div className="forms">
 
-      <form className={this.props.prefix}>
+        <form className="source">
+          <Format prefix="s" label="Source Format" />
+          <Projection prefix="s" label="Source Projection" />
+          <Data prefix="s" label="Source Data" />
+        </form>
 
-        <div className="form-group">
+        <hr />
 
-          <label>Source Format</label>
+        <form className="target">
+          <Format prefix="t" label="Target Format" />
+          <Projection prefix="t" label="Target Projection" />
+          <Data prefix="t" label="Target Data" />
+        </form>
 
-          <select
-            name={this.props.prefix+"-format"}
-            className="form-control">
-
-            <option value="gml">GML</option>
-            <option value="gpx">GPX</option>
-            <option value="geojson">GeoJSON</option>
-            <option value="igc">IGC</option>
-            <option value="kml">KML</option>
-            <option value="osmxml">OSMXML</option>
-            <option value="topojson">Topojson</option>
-            <option value="wfs">WFS</option>
-            <option value="wkt">WKT</option>
-
-          </select>
-
-        </div>
-
-      </form>
-
+      </div>
     );
   }
 
