@@ -8,7 +8,7 @@ module.exports = {
 
   dist: {
     files: ['index.jade', 'assets/**/*'],
-    tasks: 'compile'
+    tasks: 'browserify'
   }
 
 };
