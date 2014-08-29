@@ -1,3 +1,3 @@
 # reproject.it
 
-Reproject all the things!
+Reproject all the things.
