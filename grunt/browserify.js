@@ -3,11 +3,12 @@
 module.exports = {
 
   options: {
-    transform: [require('grunt-react').browserify]
+    transform: [require('grunt-react').browserify],
+    watch: true
   },
 
   dist: {
-    src: 'assets/javascripts/app.js',
+    src: 'assets/javascripts/index.js',
     dest: '_site/script.js'
   }
 

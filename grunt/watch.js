@@ -2,13 +2,19 @@
 
 module.exports = {
 
-  options: {
-    livereload: true
+  livereload: {
+    files: '_site/**/*',
+    options: { livereload: true }
   },
 
-  dist: {
-    files: ['index.jade', 'assets/**/*'],
-    tasks: 'browserify'
+  jade: {
+    files: 'index.jade',
+    tasks: 'jade'
+  },
+
+  less: {
+    files: 'assets/**/*.less',
+    tasks: 'less'
   }
 
 };

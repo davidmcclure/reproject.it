@@ -6,6 +6,7 @@ var $ = require('jquery');
 var Form = require('./form');
 
 
+// TODO|dev
 var ReprojectIt = React.createClass({
   render: function() {
     return <Form prefix="source" />;
@@ -13,9 +14,8 @@ var ReprojectIt = React.createClass({
 });
 
 
-$(function() {
-  React.renderComponent(
-    <ReprojectIt />,
-    document.getElementById('reproject')
-  );
-});
+// TODO|dev
+React.renderComponent(
+  <ReprojectIt />,
+  document.getElementById('primary')
+);
