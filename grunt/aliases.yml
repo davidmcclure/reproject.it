@@ -1,6 +1,5 @@
 
 compile:
-  - clean
   - jade
   - browserify
   - less
@@ -11,6 +10,7 @@ compile:min:
   - cssmin
 
 default:
+  - clean
   - compile
   - connect
   - watch

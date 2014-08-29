@@ -5,4 +5,44 @@ html(lang="en")
     script(type="text/javascript" src="script.js")
     link(rel="stylesheet" href="style.css")
   body
-    h1 Test
+    .container
+      .row
+        .col-md-6
+
+          .page-header: h1 reproject.it
+
+          form.source
+
+            .form-group
+              label Source Format
+              select.form-control(name="sformat")
+                option(value="wkt") WKT
+                option(value="kml") KML
+
+            .form-group
+              label Source Projection
+              select.form-control(name="sproj")
+                option(value="4326") EPSG:4326
+                option(value="3857") EPSG:3857
+
+            .form-group
+              label Source Data
+              textarea.form-control(name="sdata")
+
+          form.target
+
+            .form-group
+              label Target Format
+              select.form-control(name="tformat")
+                option(value="wkt") WKT
+                option(value="kml") KML
+
+            .form-group
+              label Target Projection
+              select.form-control(name="tproj")
+                option(value="4326") EPSG:4326
+                option(value="3857") EPSG:3857
+
+            .form-group
+              label Target Data
+              textarea.form-control(name="tdata")
