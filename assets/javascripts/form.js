@@ -17,42 +17,42 @@ module.exports = React.createClass({
     return (
       <div className="forms">
 
-        <form className="source">
+        <form className="input">
 
           <Format
-            label="Source Format"
-            prefix="s"
+            label="Input Format"
+            prefix="i"
             onInput={this.onInput} />
 
           <Projection
-            label="Source Projection"
-            prefix="s"
+            label="Input Projection"
+            prefix="i"
             onInput={this.onInput} />
 
           <Data
-            label="Source Data"
-            prefix="s"
+            label="Input Data"
+            prefix="i"
             onInput={this.onInput} />
 
         </form>
 
         <hr />
 
-        <form className="target">
+        <form className="output">
 
           <Format
-            label="Target Format"
-            prefix="t"
+            label="Output Format"
+            prefix="o"
             onInput={this.onInput} />
 
           <Projection
-            label="Target Projection"
-            prefix="t"
+            label="Output Projection"
+            prefix="o"
             onInput={this.onInput} />
 
           <Data
-            label="Target Data"
-            prefix="t"
+            label="Output Data"
+            prefix="o"
             onInput={this.onInput} />
 
         </form>
