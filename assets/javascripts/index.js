@@ -9,7 +9,11 @@ var Form = require('./form');
 // Application.
 var ReprojectIt = React.createClass({
   render: function() {
-    return <Form />;
+    return (
+      <div id="reproject">
+        <Form />
+      </div>
+    );
   }
 });
 
