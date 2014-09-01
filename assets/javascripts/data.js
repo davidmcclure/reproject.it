@@ -18,7 +18,8 @@ module.exports = React.createClass({
 
         <textarea
           name={this.props.prefix+"-data"}
-          className="form-control" />
+          className="form-control"
+          onInput={this.props.onInput} />
 
       </div>
     );

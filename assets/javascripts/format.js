@@ -18,7 +18,8 @@ module.exports = React.createClass({
 
         <select
           name={this.props.prefix+"-format"}
-          className="form-control">
+          className="form-control"
+          onInput={this.props.onInput}>
 
           <option value="gml">GML</option>
           <option value="gpx">GPX</option>
