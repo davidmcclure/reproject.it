@@ -17,12 +17,21 @@ module.exports = React.createClass({
         <label>{this.props.label}</label>
 
         <textarea
-          name={this.props.prefix+"-data"}
           className="form-control"
-          onInput={this.props.onInput} />
+          onInput={this.onInput} />
 
       </div>
     );
+  },
+
+
+  /**
+   * Apply the new value.
+   *
+   * @param {Object} event
+   */
+  onInput: function(event) {
+    this.props.value.set(event.target.value);
   }
 
 

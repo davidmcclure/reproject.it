@@ -67,7 +67,7 @@ module.exports = React.createClass({
    * When the "Reproject!" button is clicked.
    */
   onReproject: function() {
-    console.log(this.props.fields.input.format.getValue());
+    console.log(this.props.fields.getValue());
   }
 
 
