@@ -3,17 +3,20 @@
 /** @jsx React.DOM */
 var React = require('react');
 var $ = require('jquery');
+var Cortex = require('cortexjs');
 var Form = require('./form');
 
 
-// Application.
-var ReprojectIt = React.createClass({
-  render: function() {
-    return (
-      <div id="reproject">
-        <Form />
-      </div>
-    );
+var data = new Cortex({
+  input: {
+    format: 'kml',
+    projection: null,
+    data: null
+  },
+  output: {
+    format: 'wkt',
+    projection: null,
+    data: null
   }
 });
 
@@ -21,7 +24,7 @@ var ReprojectIt = React.createClass({
 // Startup.
 $(function() {
   React.renderComponent(
-    <ReprojectIt />,
+    <Form fields={data} />,
     document.getElementById('primary')
   );
 });

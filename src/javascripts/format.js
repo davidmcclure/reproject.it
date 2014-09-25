@@ -17,9 +17,8 @@ module.exports = React.createClass({
         <label>{this.props.label}</label>
 
         <select
-          name={this.props.prefix+"-format"}
           className="form-control"
-          onInput={this.props.onInput}>
+          onInput={this.onInput}>
 
           <option value="gml">GML</option>
           <option value="gpx">GPX</option>
@@ -35,6 +34,16 @@ module.exports = React.createClass({
 
       </div>
     );
+  },
+
+
+  /**
+   * Apply the new value.
+   *
+   * @param {Object} event
+   */
+  onInput: function(event) {
+    this.props.value.set(event.target.value);
   }
 
 

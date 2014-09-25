@@ -2,6 +2,7 @@
 
 /** @jsx React.DOM */
 var React = require('react');
+var Cortex = require('cortexjs');
 var Format = require('./format');
 var Projection = require('./projection');
 var Data = require('./data');
@@ -18,25 +19,55 @@ module.exports = React.createClass({
       <div className="forms">
 
         <form className="input">
-          <Format label="Input Format" prefix="i" />
-          <Projection label="Input Projection" prefix="i" />
-          <Data label="Input Data" prefix="i" />
+
+          <Format
+            label="Input Format"
+            value={this.props.fields.input.format} />
+
+          <Projection
+            label="Input Projection"
+            value={this.props.fields.input.projection} />
+
+          <Data
+            label="Input Data"
+            value={this.props.fields.input.data} />
+
         </form>
 
         <hr />
 
         <form className="output">
-          <Format label="Output Format" prefix="o" />
-          <Projection label="Output Projection" prefix="o" />
-          <Data label="Output Data" prefix="o" />
+
+          <Format
+            label="Output Format"
+            value={this.props.fields.output.format} />
+
+          <Projection
+            label="Output Projection"
+            value={this.props.fields.output.projection} />
+
+          <Data
+            label="Output Data"
+            value={this.props.fields.output.data} />
+
         </form>
 
-        <button className="btn btn-lg btn-primary">
+        <button
+          className="btn btn-lg btn-primary"
+          onClick={this.onReproject}>
           Reproject!
         </button>
 
       </div>
     );
+  },
+
+
+  /**
+   * When the "Reproject!" button is clicked.
+   */
+  onReproject: function() {
+    console.log(this.props.fields.input.format.getValue());
   }
 
 
