@@ -18,7 +18,8 @@ module.exports = React.createClass({
 
         <select
           className="form-control"
-          onInput={this.onInput}>
+          value={this.props.value.getValue()}
+          onChange={this.onChange}>
 
           <option value="gml">GML</option>
           <option value="gpx">GPX</option>
@@ -42,7 +43,7 @@ module.exports = React.createClass({
    *
    * @param {Object} event
    */
-  onInput: function(event) {
+  onChange: function(event) {
     this.props.value.set(event.target.value);
   }
 

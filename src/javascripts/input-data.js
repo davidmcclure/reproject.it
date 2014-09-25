@@ -18,7 +18,8 @@ module.exports = React.createClass({
 
         <textarea
           className="form-control"
-          onInput={this.onInput} />
+          value={this.props.value.getValue()}
+          onChange={this.onChange} />
 
       </div>
     );
@@ -30,7 +31,7 @@ module.exports = React.createClass({
    *
    * @param {Object} event
    */
-  onInput: function(event) {
+  onChange: function(event) {
     this.props.value.set(event.target.value);
   }
 

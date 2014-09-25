@@ -7,6 +7,7 @@ var Cortex = require('cortexjs');
 var Form = require('./form');
 
 
+// Form fields.
 var data = new Cortex({
   input: {
     format: 'kml',
@@ -21,10 +22,12 @@ var data = new Cortex({
 });
 
 
-// Startup.
-$(function() {
-  React.renderComponent(
-    <Form fields={data} />,
-    document.getElementById('primary')
-  );
+// Root component.
+var app = React.renderComponent(
+  <Form fields={data} />,
+  document.getElementById('primary')
+);
+
+data.on('update', function(updated) {
+  app.setProps({ fields: updated });
 });
