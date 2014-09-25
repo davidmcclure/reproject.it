@@ -3,9 +3,9 @@
 /** @jsx React.DOM */
 var React = require('react');
 var Cortex = require('cortexjs');
-var Format = require('./format');
-var Projection = require('./projection');
-var Data = require('./data');
+var Format = require('./input-format');
+var Projection = require('./input-proj');
+var Data = require('./input-data');
 
 
 module.exports = React.createClass({
