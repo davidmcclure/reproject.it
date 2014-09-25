@@ -18,43 +18,17 @@ module.exports = React.createClass({
       <div className="forms">
 
         <form className="input">
-
-          <Format
-            label="Input Format"
-            prefix="i"
-            onInput={this.onInput} />
-
-          <Projection
-            label="Input Projection"
-            prefix="i"
-            onInput={this.onInput} />
-
-          <Data
-            label="Input Data"
-            prefix="i"
-            onInput={this.onInput} />
-
+          <Format label="Input Format" prefix="i" />
+          <Projection label="Input Projection" prefix="i" />
+          <Data label="Input Data" prefix="i" />
         </form>
 
         <hr />
 
         <form className="output">
-
-          <Format
-            label="Output Format"
-            prefix="o"
-            onInput={this.onInput} />
-
-          <Projection
-            label="Output Projection"
-            prefix="o"
-            onInput={this.onInput} />
-
-          <Data
-            label="Output Data"
-            prefix="o"
-            onInput={this.onInput} />
-
+          <Format label="Output Format" prefix="o" />
+          <Projection label="Output Projection" prefix="o" />
+          <Data label="Output Data" prefix="o" />
         </form>
 
         <button className="btn btn-lg btn-primary">
@@ -63,16 +37,6 @@ module.exports = React.createClass({
 
       </div>
     );
-  },
-
-
-  /**
-   * When fields are changed.
-   *
-   * @param {Object} event
-   */
-  onInput: function(event) {
-    console.log('form change', event);
   }
 
 
