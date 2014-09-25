@@ -4,6 +4,9 @@
 var React = require('react');
 var $ = require('jquery');
 var Form = require('./form');
+var ol = require('ol');
+
+console.log(ol);
 
 
 // Application.
